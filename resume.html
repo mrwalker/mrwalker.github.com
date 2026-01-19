@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Matthew R. Walker - Resume</title>
+    <style>
+        @page {
+            margin: 0.75in;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #000;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 24pt;
+            font-weight: normal;
+            margin: 0 0 5px 0;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+        }
+
+        .contact {
+            font-size: 10pt;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 12pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 20px 0 10px 0;
+            border-bottom: 1px solid #000;
+        }
+
+        h3 {
+            font-size: 11pt;
+            font-weight: bold;
+            margin: 12px 0 5px 0;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .job-dates {
+            font-style: italic;
+            text-align: right;
+        }
+
+        .job-description {
+            margin: 5px 0 15px 0;
+        }
+
+        .education-item {
+            margin-bottom: 10px;
+        }
+
+        .degree {
+            font-style: italic;
+        }
+
+        .institution {
+            font-weight: bold;
+        }
+
+        ul {
+            margin: 5px 0 10px 20px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 3px;
+        }
+
+        .skills-section {
+            margin-bottom: 10px;
+        }
+
+        .skill-category {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Matthew R. Walker</h1>
+    <div class="contact">
+        matt.r.walker@gmail.com | 9604 Vista View Dr, Austin, TX 78750
+    </div>
+
+    <h2>Education</h2>
+
+    <div class="education-item">
+        <div class="institution">University of Texas at Austin</div>
+        <div><span class="degree">MS, Computer Sciences, May 2005</span> | Advisor: Dr. Inderjit Dhillon</div>
+    </div>
+
+    <div class="education-item">
+        <div class="institution">Rice University</div>
+        <div><span class="degree">BS, Electrical and Computer Engineering, May 2003</span> | Magna cum laude</div>
+    </div>
+
+    <h2>Experience</h2>
+
+    <div class="job-header">
+        <div><strong>Simon AI</strong> – <span class="job-title">CTO, CISO, and Co-Founder</span></div>
+        <div class="job-dates">Nov 2013 – Present</div>
+    </div>
+    <div class="job-description">
+        Co-founded and scaled Simon AI from inception to a leading Customer Data Platform (CDP) serving enterprise clients including JetBlue, Equinox, and Bombas. Led engineering organization in building Simon's Agentic Marketing Platform, which combines composable AI agents with a composable CDP to enable next-generation customer personalization and cross-channel orchestration.
+        <ul>
+            <li>Architected and led development of agentic AI system enabling autonomous marketing campaign optimization and personalization at scale</li>
+            <li>Built distributed data platform handling petabyte-scale customer data processing using Snowflake, Redshift, Trino, and Spark</li>
+            <li>Designed and implemented real-time segmentation engine using Redis, Elasticsearch, and custom event processing pipelines</li>
+            <li>Established security architecture and compliance frameworks achieving SOC 2 Type II certification</li>
+            <li>Built engineering culture emphasizing precision software engineering, system reliability, and technical excellence</li>
+            <li>Technology stack: Python, Django, React, TypeScript, Pydantic AI, Langfuse, Snowflake, Redshift, Trino, Spark, Redis, Elasticsearch, EMR</li>
+        </ul>
+    </div>
+
+    <div class="job-header">
+        <div><strong>OmniBuilds.com</strong> – <span class="job-title">Advisor</span></div>
+        <div class="job-dates">Oct 2017 – Oct 2018</div>
+    </div>
+    <div class="job-description">
+        Provided technical advisory services on platform architecture and scalability.
+    </div>
+
+    <div class="job-header">
+        <div><strong>Apple</strong> – <span class="job-title">Data Scientist</span></div>
+        <div class="job-dates">Apr 2013 – Nov 2013</div>
+    </div>
+    <div class="job-description">
+        Applied machine learning and statistical methods to product analytics and user experience optimization.
+    </div>
+
+    <div class="job-header">
+        <div><strong>Etsy</strong> – <span class="job-title">Staff Software Engineer</span></div>
+        <div class="job-dates">Dec 2009 – Apr 2013</div>
+    </div>
+    <div class="job-description">
+        Created EMR-based analytics platform with cascading.jruby query language and extensive custom operator library written in Scala. Built CEP-like visit query operators enabling fine-grained attribution of user actions to site features. Scaled system to over 300 jobs powering A/B testing, search experiments, member lifecycle analysis, and business intelligence dashboards.
+    </div>
+
+    <div class="job-header">
+        <div><strong>Adtuitive</strong> – <span class="job-title">Online Advertising Research</span></div>
+        <div class="job-dates">May 2009 – Dec 2009</div>
+    </div>
+    <div class="job-description">
+        First hire brought on to research domain-specific page-to-product matching algorithms. Built on-demand EC2 sandbox for search index analysis and algorithm experimentation. Researched IDTokenSets and custom algorithm built on Needleman-Wunsch for product name extraction. Applied engineering skills to create affiliate tracking system, provide searchable product tags, and build web ETL pipeline in cascading.jruby.
+    </div>
+
+    <div class="job-header">
+        <div><strong>Pulse Meridian</strong> – <span class="job-title">Data-Driven Business Optimization</span></div>
+        <div class="job-dates">Jun 2007 – Aug 2008</div>
+    </div>
+    <div class="job-description">
+        Founded startup with graduate school colleagues. Developed multilinear and multivariate polynomial models to optimize semiconductor yield for Pintail Technologies. Provided CNET data mining consulting services to lift click rates in their online advertisement platform. Built several web applications, one currently used to measure the efficacy of lithotripsy treatments by a urology practice.
+    </div>
+
+    <div class="job-header">
+        <div><strong>Pervasive Software</strong> – <span class="job-title">Dataflow Engineering</span></div>
+        <div class="job-dates">May 2007 – May 2009</div>
+    </div>
+    <div class="job-description">
+        Converted dataflow framework into pure Java library, seeing project through to general availability. Designed composition language and embedded library in JRuby to further improve developer productivity. Implemented, benchmarked, and optimized several key operators used for delimited text I/O, k-means co-clustering, support vector machine classification, and Monte Carlo simulation.
+    </div>
+
+    <div class="job-header">
+        <div><strong>Pervasive Software</strong> – <span class="job-title">Hyper-Parallel Dataflow</span></div>
+        <div class="job-dates">Nov 2006 – May 2007</div>
+    </div>
+    <div class="job-description">
+        Conducted original research in concurrent programming using a Java framework for dataflow applications. Implemented and benchmarked a variety of novel dataflow formulations of algorithms including decision tree training, rule-based name standardization, and k-means clustering.
+    </div>
+
+    <div class="job-header">
+        <div><strong>Scott & White Hospital</strong> – <span class="job-title">Software Consultant</span></div>
+        <div class="job-dates">Sep 2006 – Sep 2012</div>
+    </div>
+    <div class="job-description">
+        Developed, modified, and maintained library of stored procedures, views, and Crystal Reports in pathology department's PowerPath system. Collaborated with physicians to generate reports for auditing, administration, and research.
+    </div>
+
+    <div class="job-header">
+        <div><strong>Texas A&M University</strong> – <span class="job-title">Secure Distributed Applications</span></div>
+        <div class="job-dates">Jun 2005 – Nov 2006</div>
+    </div>
+    <div class="job-description">
+        Designed and implemented distributed applications spanning authentication, identity management, web apps, provisioning, and bulk mail. Coordinated subsystem deployment, testing, interface features, and notification content.
+    </div>
+
+    <div class="job-header">
+        <div><strong>University of Texas at Austin</strong> – <span class="job-title">Research</span></div>
+        <div class="job-dates">Sep 2003 – Dec 2004</div>
+    </div>
+    <div class="job-description">
+        Conducted original research in data mining and optimization focusing on constrained k-means clustering. Solved optimization problems in C++ using MOSEK, while addressing noisy constraints.
+    </div>
+
+    <div class="job-header">
+        <div><strong>MIT Lincoln Laboratory</strong> – <span class="job-title">Satellite Tracking</span></div>
+        <div class="job-dates">Jun 2002 – Aug 2002</div>
+    </div>
+    <div class="job-description">
+        Upgraded real-time ionospheric monitoring system from FORTRAN and C to object-oriented C++. Measured and corrected for ionospheric activity's effect on satellite tracking using GPS signal bias.
+    </div>
+
+    <div class="job-header">
+        <div><strong>Rice University</strong> – <span class="job-title">Parallel Disk Scheduling</span></div>
+        <div class="job-dates">Jun 2001 – Aug 2001</div>
+    </div>
+    <div class="job-description">
+        Simulated the PC-OPT parallel disk scheduling algorithm. Developed software testing environment and collected data to identify the optimal prefetch schedule.
+    </div>
+
+    <div class="job-header">
+        <div><strong>Rice University</strong> – <span class="job-title">Device Drivers</span></div>
+        <div class="job-dates">Jun 2000 – Aug 2000</div>
+    </div>
+    <div class="job-description">
+        Implemented device drivers and firmware for VME cards used as high-speed data selectors in the Muon Detector at CERN.
+    </div>
+
+    <h2>Teaching</h2>
+
+    <ul>
+        <li>Volunteer coding instructor at Spicewood Elementary, teaching kindergartners to code (Mar 2015 – Apr 2020)</li>
+        <li>Computer fluency teaching assistant, fall 2004</li>
+        <li>Artificial intelligence lab assistant, spring 2003</li>
+        <li>Object-oriented programming lab assistant, spring 2002</li>
+        <li>Digital logic design lab assistant, spring 2001</li>
+    </ul>
+
+    <h2>Skills</h2>
+
+    <div class="skills-section">
+        <span class="skill-category">Agentic AI & Machine Learning:</span> Pydantic AI, Langfuse, agent architecture, LLM integration, machine learning, data mining
+    </div>
+
+    <div class="skills-section">
+        <span class="skill-category">Programming Languages:</span> Python, TypeScript, JavaScript, Scala, SQL, Bash
+    </div>
+
+    <div class="skills-section">
+        <span class="skill-category">Data Platforms & Processing:</span> Snowflake, Redshift, Trino, Spark, EMR, Hadoop, Hive
+    </div>
+
+    <div class="skills-section">
+        <span class="skill-category">Web & Application Frameworks:</span> Django, React, REST APIs
+    </div>
+
+    <div class="skills-section">
+        <span class="skill-category">Infrastructure & Databases:</span> Redis, Memcached, Elasticsearch, PostgreSQL, MySQL
+    </div>
+
+    <div class="skills-section">
+        <span class="skill-category">Cloud & DevOps:</span> AWS (EC2, S3, EMR), distributed systems, system architecture
+    </div>
+
+    <div class="skills-section">
+        <span class="skill-category">Leadership:</span> Engineering management, technical architecture, security & compliance, startup co-founding
+    </div>
+
+    <h2>Publications</h2>
+
+    <div style="margin-bottom: 8px;">
+        Nena Marin, Srivatsava Daruru, Joydeep Ghosh, <strong>Matt Walker</strong>. "Pervasive Parallelism in Data Mining: Dataflow Solution to Co-Clustering Large and Sparse Netflix Data." <em>The Fourteenth International Conference on Knowledge Discovery and Data Mining (KDD)</em>, July 2009.
+    </div>
+
+    <div style="margin-bottom: 8px;">
+        <strong>Matt Walker</strong>, Kevin Irwin. "Four Paths to Java Parallelism." <em>Java Developer's Journal</em>, Vol 13, Issue 9, September 2008.
+    </div>
+
+    <div style="margin-bottom: 8px;">
+        Jim Falgout, <strong>Matt Walker</strong>. "It's a Multi-Core World: Let the Data Flow." <em>Java Developer's Journal</em>, Vol 12, Issue 8, August 2007.
+    </div>
+
+    <div style="margin-bottom: 8px;">
+        <strong>Matt Walker</strong>. "GRIMS/RTSEQ Object-Orientation Report." <em>MIT Lincoln Laboratory</em>, Project Report SS-7, November 7, 2003.
+    </div>
+
+    <h2>Honors & Awards</h2>
+
+    <ul>
+        <li>Eagle Scout</li>
+        <li>Phi Beta Kappa</li>
+        <li>Eta Kappa Nu</li>
+        <li>Donald D. Harrington Fellowship at UT (2003–2004)</li>
+        <li>Dean's Excellence Award from UT Natural Sciences (2003)</li>
+        <li>NSF Honorable Mention (2003, 2004)</li>
+        <li>Hertz Foundation Finalist (2003)</li>
+        <li>Herbert Allen Outstanding Junior Award from Rice Engineering Alumni (2002)</li>
+        <li>Junior and Senior Merit Awards in ECE from Rice Engineering Alumni (2002, 2003)</li>
+        <li>Dean's List and President's Honor Roll at Rice University (1999–2003)</li>
+        <li>Ford Motor Company/Golden Key Undergraduate Scholar Award</li>
+        <li>Louis J. Walsh Scholarship in Engineering at Rice University</li>
+        <li>National Merit Scholar</li>
+        <li>Advanced Placement National Scholar</li>
+        <li>Abell-Hanger Foundation Scholarship from Texas Interscholastic League Foundation</li>
+    </ul>
+
+</body>
+</html>
