@@ -3,6 +3,8 @@ title: "Snowflake Cortex as home base for production Autobots"
 tags: ["agents", "snowflake"]
 date: "2025-05-08"
 linkedin: "https://www.linkedin.com/posts/mwalker_simondata-aiinfrastructure-snowflake-activity-7326189299790413824-5L-p"
+image: "/images/notes/cortex-autobot-home-base.jpg"
+imageAlt: "Autobots at work in a futuristic command center"
 ---
 
 At Simon Data, we're leveraging Snowflake Cortex as the command center for our production AI automation strategy.

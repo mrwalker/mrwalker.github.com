@@ -3,6 +3,8 @@ title: "Sridhar Ramaswamy spotlights our Cortex agents"
 tags: ["snowflake"]
 date: "2025-10-14"
 linkedin: "https://www.linkedin.com/feed/update/urn:li:share:7383972631869317120/"
+image: "/images/notes/sridhar-spotlight.jpg"
+imageAlt: "Quote card: Snowflake's AI Data Cloud was the only platform that met all three requirements"
 ---
 
 Honored to have Sridhar Ramaswamy spotlight our work building composable AI agents on Snowflake Cortex AI.

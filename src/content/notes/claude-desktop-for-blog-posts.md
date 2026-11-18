@@ -3,6 +3,8 @@ title: "Writing a blog post, Cyborg-style"
 tags: ["ai-assisted-dev"]
 date: "2025-06-21"
 linkedin: "https://www.linkedin.com/posts/mwalker_ai-technicalwriting-simondata-activity-7342200805690658816-oLgC"
+image: "/images/notes/claude-desktop-for-blog-posts.jpg"
+imageAlt: "A cyborg writer drafting by hand next to a terminal"
 ---
 
 I've recently been asked to write several blog posts around our composable agent architecture and how we've been using Snowflake Cortex to build our latest generation of AI applications at Simon. This morning, with just a single cup of coffee in my left hand, I used my right to index past content (blog posts, LinkedIn articles, and outlines I've been working on) into a Claude project. Then I hooked up the Atlassian Confluence MCP server and started iterating through with Claude Sonnet 4 in extended thinking mode.

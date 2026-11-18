@@ -15,6 +15,8 @@ Use **pnpm** (global `npm` is broken on this machine). `.npmrc` pins Node 24 for
 
 - **Long-form posts**: `src/content/writing/<slug>.md`. This site is the canonical home; Medium is a mirror (`mirrorName`/`mirrorUrl`). Set `canonical` only when a partner venue must stay canonical (e.g. Snowflake's blog). Schema: `src/content.config.ts`.
 - **Notes** (short posts, usually from LinkedIn): `src/content/notes/<slug>.md` with `linkedin:` URL. `featured: true` puts it on the home page.
+  Attach the post's image as `image:` (saved under `public/images/notes/`) plus `imageAlt:`. LinkedIn image URLs expire, so download them; never hotlink.
+- **Cover crops**: `coverFit: "contain"` for diagram covers; `coverPosition: "50% 0%"` (CSS object-position) when the default crop cuts off a subject.
 - `draft: true` hides an entry from builds, RSS and llms.txt.
 - Source drafts live in `../mwalker-writer` (`tech-platform/blog-posts/`, `linkedin/`). Strip the `# Title` and `> Source:` header lines when copying; they become frontmatter.
 - **Structured data**: `src/data/` holds `timeline.ts` (git-log career, newest first, `pin: true` = shown on home), `talks.ts`, `papers.ts`, `site.ts` (nav, socials, Mahal CTA copy).

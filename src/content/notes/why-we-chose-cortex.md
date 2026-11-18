@@ -3,6 +3,8 @@ title: "Security, scale, and speed: why we built on Cortex"
 tags: ["agents", "snowflake"]
 date: "2025-09-07"
 linkedin: "https://www.linkedin.com/feed/update/urn:li:share:7370465609341579264/"
+image: "/images/writing/cortex.jpg"
+imageAlt: "Simon AI architecture on Snowflake Cortex"
 ---
 
 Most AI stacks force you to choose between security, scale, or speed. You can't have all three. That's exactly why we built Simon's Composable AI Agents directly on **Snowflake** Cortex AI.

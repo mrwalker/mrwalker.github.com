@@ -23,6 +23,7 @@ const rendered = await Promise.all(notes.map(async (n) => ({ n, Content: (await 
         {n.data.highlight && <span class="badge-hl">{n.data.highlight}</span>}
         {n.data.linkedin && <a href={n.data.linkedin} target="_blank" rel="noopener">on LinkedIn ↗</a>}
       </div>
+      {n.data.image && <img class="note-image" src={n.data.image} alt={n.data.imageAlt} loading="lazy" />}
       <div class="prose"><Content /></div>
     </article>
   ))}

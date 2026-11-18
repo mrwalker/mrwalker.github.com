@@ -3,6 +3,8 @@ title: "Nine months on Cortex, from Mexico City"
 tags: ["snowflake"]
 date: "2025-09-10"
 linkedin: "https://www.linkedin.com/feed/update/urn:li:share:7371677127563333633/"
+image: "/images/notes/nine-months-on-cortex.jpg"
+imageAlt: "Simon AI architecture: composable agents in the client's Snowflake environment"
 ---
 
 Nine months ago, we made a bet on Snowflake Cortex AI to power Simon's Composable AI Agents. Today, I'm looking back on that decision from our engineering offsite, and I couldn't be happier.

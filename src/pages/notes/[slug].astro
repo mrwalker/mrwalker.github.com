@@ -14,7 +14,7 @@ const { Content } = await render(note);
 const d = note.data;
 const description = (note.body ?? '').replace(/https?:\/\/\S+/g, '').replace(/[*_`#>]/g, '').replace(/\s+/g, ' ').trim().slice(0, 155);
 ---
-<Base title={d.title} description={description} type="article" publishedTime={d.date}>
+<Base title={d.title} description={description} image={d.image} type="article" publishedTime={d.date}>
   <article>
     <header class="article-header">
       <p class="page-cmd"><span class="ps1">$</span> cat ~/notes/{note.id}.md</p>
@@ -26,6 +26,7 @@ const description = (note.body ?? '').replace(/https?:\/\/\S+/g, '').replace(/[*
         {d.tags.map((t) => <span class="tag">{t}</span>)}
       </div>
     </header>
+    {d.image && <img class="note-image" src={d.image} alt={d.imageAlt} />}
     <div class="prose"><Content /></div>
     <footer class="article-footer">
       {d.linkedin && (

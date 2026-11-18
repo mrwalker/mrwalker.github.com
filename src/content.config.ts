@@ -37,6 +37,9 @@ const notes = defineCollection({
     date: z.coerce.date(),
     tags: z.array(z.string()).default([]),
     linkedin: z.string().url().optional(),
+    /** Image attached to the original post (usually under /images/notes/). */
+    image: z.string().optional(),
+    imageAlt: z.string().default(''),
     /** Small badge, e.g. "Reposted by the author". */
     highlight: z.string().optional(),
     featured: z.boolean().default(false),

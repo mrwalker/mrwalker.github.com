@@ -3,6 +3,8 @@ title: "Cyborgs and Autobots: an AI enablement workshop"
 tags: ["agents"]
 date: "2025-05-01"
 linkedin: "https://www.linkedin.com/posts/mwalker_simondata-aienablement-solutionsarchitecture-activity-7324048970203246592-ucjQ/"
+image: "/images/notes/cyborgs-and-autobots.jpg"
+imageAlt: "A cyborg and an Autobot side by side"
 ---
 
 Just wrapped an incredible AI enablement workshop with our Solutions Architecture team here in Austin, and I couldn't be prouder of what we accomplished.

@@ -3,6 +3,8 @@ title: "The journey to marketer independence"
 tags: ["founding"]
 date: "2025-09-14"
 linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:7373365151124799488/"
+image: "/images/notes/simon-data-becomes-simon-ai.jpg"
+imageAlt: "Mexico City's Monument to Independence at night"
 ---
 
 🚀 Today marks a pivotal moment: Simon Data becomes Simon AI, and we're launching [simon.ai](http://simon.ai)

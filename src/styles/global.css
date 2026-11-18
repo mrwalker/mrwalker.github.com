@@ -514,6 +514,7 @@ main > section + section { margin-top: 64px; }
 .note h2 a, .note h3 a { color: var(--text-primary); text-decoration: none; }
 .note h2 a:hover, .note h3 a:hover { color: var(--primary); }
 .note .meta { margin-bottom: 14px; }
+.note-image { display: block; max-width: 100%; max-height: 460px; width: auto; height: auto; border-radius: 12px; border: 1px solid var(--border); margin: 0 0 18px; }
 .note-teaser { color: var(--text-secondary); font-size: 15px; line-height: 1.65; }
 .notes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
 .notes-grid .note + .note { margin-top: 0; }

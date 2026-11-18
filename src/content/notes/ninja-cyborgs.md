@@ -3,6 +3,8 @@ title: "Ninja Cyborgs: custom coding agents with MCP"
 tags: ["ai-assisted-dev"]
 date: "2025-05-11"
 linkedin: "https://www.linkedin.com/posts/mwalker_simondata-ai-softwaredevelopment-activity-7327277072932843520-Ero8"
+image: "/images/notes/ninja-cyborgs.jpg"
+imageAlt: "A cyber ninja with a glowing katana"
 ---
 
 **Zen Agents** from Zencoder have transformed our development process at Simon Data by turning our engineers into what I call 'ninja Cyborgs' - developers with superhuman capabilities.

@@ -3,6 +3,8 @@ title: "Composable agents: the next evolution"
 tags: ["agents", "snowflake"]
 date: "2025-05-15"
 linkedin: "https://www.linkedin.com/posts/mwalker_simondata-composableagents-composableai-activity-7329476207618543617-s9kb/"
+image: "/images/notes/composable-agents-next-evolution.jpg"
+imageAlt: "A secret agent in circuit-board suit and HUD glasses"
 ---
 
 I've been speaking a lot about our internal Cyborgs and Autobots, but today I want to spotlight work we've been doing in collaboration with Snowflake on "composable agents" - the next logical step in the evolution of our data infrastructure here at Simon.

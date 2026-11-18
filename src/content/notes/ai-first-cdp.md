@@ -3,6 +3,8 @@ title: "From Simon Data to Simon AI — and the architecture that makes all the 
 tags: ["agents", "data"]
 date: "2025-09-27"
 linkedin: "https://www.linkedin.com/feed/update/urn:li:share:7377692943484116992/"
+image: "/images/notes/ai-first-cdp.jpg"
+imageAlt: "Contextual personalization at massive scale: traditional CDP, 50 campaigns; AI-first CDP, 1,000+"
 ---
 
 I'm excited to share insights from our VP of Engineering, Ernesto Gonzalez, on how we've built something fundamentally different in the AI-for-marketing space.
