@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import GitLog from '../components/GitLog.astro';
+---
+<Base title="Changelog" description="Matt Walker's career as a git log: companies founded, exits, talks, papers, and side quests.">
+  <p class="page-cmd"><span class="ps1">$</span> git log --all</p>
+  <h1 class="section-title">Changelog</h1>
+  <p class="lede">
+    Twenty-five years of commits, newest first. Two exits (<span class="ty-exit">exit:</span>), a few companies started
+    (<span class="ty-init">init:</span>), and a lot of shipping in between. The full version, with fewer puns, is the <a href="/resume/">resume</a>.
+  </p>
+  <GitLog />
+</Base>

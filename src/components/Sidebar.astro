@@ -1,0 +1,41 @@
+---
+import Icon from './Icon.astro';
+import { SITE, MAHAL, SOCIALS, NAV } from '../data/site';
+
+const path = Astro.url.pathname.replace(/\/?$/, '/');
+const isCurrent = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+---
+<aside class="sidebar" aria-label="About Matt">
+  <div class="profile-section">
+    <img src="/images/avatar.png" alt="Matt Walker" class="profile-image" width="160" height="160" />
+    <div class="glitch" data-text={SITE.name}><a href="/">{SITE.name}</a></div>
+    <p class="title">Co-founder, <a href={MAHAL.url} target="_blank" rel="noopener">Mahal Systems</a></p>
+    <p class="subtitle">{SITE.tagline}</p>
+  </div>
+
+  <nav class="nav" aria-label="Site">
+    <ul>
+      {NAV.map((item) => (
+        <li>
+          <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+            <span class="prompt">{item.href === '/' ? '$ cd ' : '$ cd ~/'}</span>{item.href === '/' ? '~' : item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+
+  <div class="social-links">
+    {SOCIALS.map((s) => (
+      <a href={s.href} target="_blank" rel="me noopener" aria-label={s.label} title={s.label}>
+        <Icon name={s.icon} />
+      </a>
+    ))}
+    <a href="/rss.xml" aria-label="RSS feed" title="RSS feed"><Icon name="rss" /></a>
+  </div>
+
+  <div class="sidebar-actions">
+    <a href={`mailto:${MAHAL.email}`} class="mx-side"><img src="/mahal/mahal-icon.png" alt="" width="20" height="20" />Work with Mahal</a>
+    <a href="/resume/" class="button ghost">View Resume</a>
+  </div>
+</aside>

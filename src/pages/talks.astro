@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import { APPEARANCES } from '../data/talks';
+
+const years = [...new Set(APPEARANCES.map((a) => a.date.slice(0, 4)))];
+const month = (d: string) =>
+  new Date(`${d}-01T00:00:00Z`).toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' });
+---
+<Base title="Talks & press" description="Conference talks, panels, interviews, and press from Matt Walker, mostly on building AI and data products on Snowflake.">
+  <p class="page-cmd"><span class="ps1">$</span> grep -r "Matt Walker" /var/log/stage</p>
+  <h1 class="section-title">Talks &amp; press</h1>
+  <p class="lede">
+    Panels, interviews, and press, mostly about building data and AI products natively on Snowflake.
+    Want me on a panel about agents or evals? <a href="mailto:hello@mahalsystems.ai">Get in touch</a>.
+  </p>
+
+  {years.map((y) => (
+    <div class="year-group">
+      <div class="year-label">{y}</div>
+      <ul class="entries">
+        {APPEARANCES.filter((a) => a.date.startsWith(y)).map((a) => (
+          <li class="entry">
+            <span class="when">{month(a.date)}</span>
+            <div>
+              <div class="meta"><span class={`kind kind-${a.kind}`}>{a.kind}</span><span>{a.venue}</span></div>
+              {a.title && <h3>{a.links?.[0] ? <a href={a.links[0].href} target="_blank" rel="noopener">{a.title}</a> : a.title}</h3>}
+              {a.blurb && <p>{a.blurb}</p>}
+              {a.links && a.links.length > 0 && (
+                <div class="links">{a.links.map((l) => <a href={l.href} target="_blank" rel="noopener">{l.label} ↗</a>)}</div>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</Base>

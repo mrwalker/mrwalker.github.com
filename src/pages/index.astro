@@ -1,0 +1,71 @@
+---
+import Base from '../layouts/Base.astro';
+import MahalCard from '../components/MahalCard.astro';
+import PostCard from '../components/PostCard.astro';
+import GitLog from '../components/GitLog.astro';
+import { getWriting, getNotes, fmtDate } from '../lib/content';
+
+const posts = (await getWriting()).slice(0, 3);
+const notes = (await getNotes()).filter((n) => n.data.featured).slice(0, 3);
+const teaser = (body?: string) => {
+  const text = (body ?? '').replace(/https?:\/\/\S+/g, '').replace(/[*_`#>]/g, '').replace(/\s+/g, ' ').trim();
+  return text.length > 190 ? text.slice(0, 190).replace(/\s+\S*$/, '') + '…' : text;
+};
+---
+<Base>
+  <section class="intro">
+    <p class="page-cmd"><span class="ps1">$</span> cat about.txt</p>
+    <h1 class="section-title">About</h1>
+    <p>
+      I build AI agents, and lately, the evals that tell you whether they actually got better. Before this I spent thirteen years
+      as co-founder and CTO of Simon AI, <a href="/notes/monetate-personal-reflection/">acquired by Monetate</a> in 2026.
+    </p>
+    <p>
+      I'm co-founder of <strong><a href="https://mahalsystems.ai/" target="_blank" rel="noopener">Mahal Systems</a></strong>,
+      where <a href="https://www.drjasondavis.com/" target="_blank" rel="noopener">Jason Davis</a> and I help teams measure and optimize their agents:
+      evals built from real traces, calibrated LLM judges, and a library of optimizations that come with evidence.
+    </p>
+  </section>
+
+  <section aria-labelledby="mahal-h">
+    <h2 class="section-title" id="mahal-h">Now building</h2>
+    <MahalCard />
+  </section>
+
+  <section aria-labelledby="writing-h">
+    <div class="section-head">
+      <h2 class="section-title" id="writing-h">Latest writing</h2>
+      <a class="more" href="/writing/">ls ~/writing →</a>
+    </div>
+    <div class="cards">
+      {posts.map((p) => <PostCard post={p} />)}
+    </div>
+  </section>
+
+  <section aria-labelledby="notes-h">
+    <div class="section-head">
+      <h2 class="section-title" id="notes-h">Notes</h2>
+      <a class="more" href="/notes/">ls ~/notes →</a>
+    </div>
+    <div class="notes-grid">
+      {notes.map((n) => (
+        <article class="note">
+          <h3><a href={`/notes/${n.id}/`}>{n.data.title}</a></h3>
+          <div class="meta">
+            <time datetime={fmtDate(n.data.date, 'iso')}>{fmtDate(n.data.date, 'short')}</time>
+            {n.data.highlight && <span class="badge-hl">{n.data.highlight}</span>}
+          </div>
+          <p class="note-teaser">{teaser(n.body)}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section aria-labelledby="log-h">
+    <div class="section-head">
+      <h2 class="section-title" id="log-h">Changelog</h2>
+      <a class="more" href="/log/">git log --all →</a>
+    </div>
+    <GitLog pinnedOnly />
+  </section>
+</Base>

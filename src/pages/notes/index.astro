@@ -1,0 +1,29 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { getNotes, fmtDate } from '../../lib/content';
+
+const notes = await getNotes();
+const rendered = await Promise.all(notes.map(async (n) => ({ n, Content: (await render(n)).Content })));
+---
+<Base title="Notes" description="Short posts from Matt Walker on models, agents, evals, and tinkering, most first posted on LinkedIn.">
+  <p class="page-cmd"><span class="ps1">$</span> tail -f ~/notes</p>
+  <h1 class="section-title">Notes</h1>
+  <p class="lede">
+    Shorter thoughts: model rotations, weekend agent projects, and things that blew my mind. Most first appeared on
+    <a href="https://www.linkedin.com/in/mwalker" target="_blank" rel="noopener">LinkedIn</a>, which is where to follow along.
+  </p>
+
+  {rendered.map(({ n, Content }) => (
+    <article class="note" id={n.id}>
+      <h2><a href={`/notes/${n.id}/`}>{n.data.title}</a></h2>
+      <div class="meta">
+        {n.data.draft && <span class="badge-draft">draft</span>}
+        <time datetime={fmtDate(n.data.date, 'iso')}>{fmtDate(n.data.date)}</time>
+        {n.data.highlight && <span class="badge-hl">{n.data.highlight}</span>}
+        {n.data.linkedin && <a href={n.data.linkedin} target="_blank" rel="noopener">on LinkedIn ↗</a>}
+      </div>
+      <div class="prose"><Content /></div>
+    </article>
+  ))}
+</Base>

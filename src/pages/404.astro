@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="404" description="Page not found.">
+  <p class="page-cmd"><span class="ps1">$</span> git checkout {Astro.url.pathname}</p>
+  <h1 class="section-title">404</h1>
+  <div class="gitlog">
+    <div class="cmd" style="color:var(--red)">error: pathspec did not match any file(s) known to git</div>
+    <div>hint: try <a href="/">~</a>, <a href="/writing/">~/writing</a>, or <a href="/notes/">~/notes</a></div>
+  </div>
+</Base>

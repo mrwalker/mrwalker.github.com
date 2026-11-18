@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+// A /now page (nownownow.com). Update the list and the date below whenever things change.
+const updated = 'November 18, 2026';
+---
+<Base title="Now" description="What Matt Walker is working on right now.">
+  <p class="page-cmd"><span class="ps1">$</span> ps aux | grep mwalker</p>
+  <h1 class="section-title">Now</h1>
+  <p class="lede">What I'm focused on at the moment. This is a <a href="https://nownownow.com/about" target="_blank" rel="noopener">/now page</a>.</p>
+
+  <ul class="now-list">
+    <li>
+      <strong><a href="https://mahalsystems.ai/" target="_blank" rel="noopener">Mahal Systems</a></strong> with Jason Davis: agent evals and
+      optimization. Latest release is <a href="https://mahalsystems.ai/aot/evals/" target="_blank" rel="noopener">AOT Evals</a> (Apache 2.0).
+    </li>
+    <li>
+      <strong>Advising Monetate</strong> after the Simon AI acquisition.
+    </li>
+    <li>
+      <strong>Fine-tuning small models on a laptop</strong>, with Opus orchestrating and Sonnet as the teacher.
+      <a href="/notes/opus-orchestrates-a-local-fine-tune/">Notes</a>.
+    </li>
+    <li>
+      <strong>Running a family assistant on a kitchen Mac mini</strong> using only free-tier models.
+      <a href="/notes/model-rotation-august-2026/">Current rotation</a>.
+    </li>
+    <li>
+      <strong>Sketching <code>daddabase.net</code></strong>, lessons for my kids. A sequel to the kindergarten coding class.
+    </li>
+  </ul>
+
+  <p class="updated">// last updated {updated}</p>
+</Base>

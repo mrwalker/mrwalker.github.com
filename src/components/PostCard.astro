@@ -1,0 +1,19 @@
+---
+import type { Post } from '../lib/content';
+import { fmtDate, readingTime } from '../lib/content';
+interface Props { post: Post }
+const { post } = Astro.props;
+const { title, description, date, cover, draft } = post.data;
+---
+<a class="card" href={`/writing/${post.id}/`}>
+  {cover ? <img src={cover} alt="" loading="lazy" /> : <div class="noimg">{`/* ${post.data.tags[0] ?? 'writing'} */`}</div>}
+  <div class="body">
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <div class="meta">
+      {draft && <span class="badge-draft">draft</span>}
+      <time datetime={fmtDate(date, 'iso')}>{fmtDate(date, 'short')}</time>
+      <span>· {readingTime(post.body)}</span>
+    </div>
+  </div>
+</a>

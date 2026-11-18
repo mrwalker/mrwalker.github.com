@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import { PAPERS, CODE } from '../data/papers';
+
+const boldMe = (authors: string) => authors.replace('Matt Walker', '<b>Matt Walker</b>');
+---
+<Base title="Papers & code" description="Matt Walker's publications (KDD '09, Java Developer's Journal) and open-source work.">
+  <p class="page-cmd"><span class="ps1">$</span> find ~ -name "*.pdf" -o -name "*.git"</p>
+  <h1 class="section-title">Papers &amp; code</h1>
+  <p class="lede">
+    Before agents, there were cores. My early work was on making data mining go parallel: dataflow engines, co-clustering, and convincing
+    the JVM to use every core it had. A summary of each is below.
+  </p>
+
+  <ul class="entries">
+    {PAPERS.map((p) => (
+      <li class="entry">
+        <span class="when">{p.year}</span>
+        <div>
+          <h3>{p.links?.[0] ? <a href={p.links[0].href} target="_blank" rel="noopener">{p.title}</a> : p.title}</h3>
+          <div class="authors" set:html={boldMe(p.authors)} />
+          <div class="venue">{p.venue}</div>
+          <p>{p.blurb}</p>
+          {p.links && <div class="links">{p.links.map((l) => <a href={l.href} target="_blank" rel="noopener">{l.label} ↗</a>)}</div>}
+        </div>
+      </li>
+    ))}
+  </ul>
+
+  <section style="margin-top:56px">
+    <h2 class="section-title">Code</h2>
+    <ul class="entries">
+      {CODE.map((c) => (
+        <li class="entry">
+          <span class="when">{c.year ?? 'git'}</span>
+          <div>
+            <h3><a href={c.href} target="_blank" rel="noopener"><code>{c.name}</code></a></h3>
+            <p>{c.blurb}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Base>

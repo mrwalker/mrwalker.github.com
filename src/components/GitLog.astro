@@ -1,0 +1,27 @@
+---
+import { LOG, type LogEntry } from '../data/timeline';
+import { shortHash } from '../lib/content';
+
+interface Props { pinnedOnly?: boolean }
+const { pinnedOnly = false } = Astro.props;
+const entries: LogEntry[] = pinnedOnly ? LOG.filter((e) => e.pin) : LOG;
+const external = (href?: string) => !!href && /^https?:/.test(href);
+---
+<div class="gitlog" role="region" aria-label="Career timeline">
+  <div class="cmd"><span class="ps1">mwalker@career $</span> git log --oneline{pinnedOnly ? ' --grep=pinned' : ''}</div>
+  <ol>
+    {entries.map((e, i) => (
+      <li>
+        <span class="hash">{shortHash(e.date + e.msg)}</span>
+        <span class="date">{e.date}</span>
+        <span class="msg">
+          {i === 0 && <span class="head">(HEAD -&gt; <b>main</b>) </span>}
+          <span class={`ty ty-${e.type}`}>{e.type}:</span>{' '}
+          {e.href
+            ? <a href={e.href} target={external(e.href) ? '_blank' : undefined} rel={external(e.href) ? 'noopener' : undefined}>{e.msg}</a>
+            : e.msg}
+        </span>
+      </li>
+    ))}
+  </ol>
+</div>

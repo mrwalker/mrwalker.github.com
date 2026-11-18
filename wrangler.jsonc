@@ -1,0 +1,16 @@
+// Cloudflare Workers static-assets deploy for mwalker.info.
+// Build: `pnpm build` -> ./dist ; Deploy: `pnpm wrangler deploy` (or Workers Builds on push).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mwalker-info",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  },
+  "routes": [
+    { "pattern": "mwalker.info", "custom_domain": true },
+    { "pattern": "www.mwalker.info", "custom_domain": true }
+  ]
+}

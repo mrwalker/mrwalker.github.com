@@ -1,0 +1,43 @@
+---
+// A piece of mahalsystems.ai spliced into the page: its graph paper, inks, type and pencil filter.
+// Styles are scoped under .mx (see global.css) so Mahal's tokens never leak into the rest of the site.
+import { MAHAL } from '../data/site';
+interface Props { compact?: boolean }
+const { compact = false } = Astro.props;
+---
+<div class="mx">
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+    <filter id="mx-pencil" x="-5%" y="-20%" width="110%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="n"></feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.25 1.55" result="tooth"></feColorMatrix>
+      <feComposite in="d" in2="tooth" operator="in"></feComposite>
+    </filter>
+  </svg>
+  <span class="mx-hand mx-formula" aria-hidden="true">d² = (x − μ)ᵀ Σ⁻¹ (x − μ)</span>
+  <a class="mx-brand" href={MAHAL.url} target="_blank" rel="noopener"><img src="/mahal/mahal-icon.png" alt="" width="30" height="30" />Mahal Systems</a>
+  {compact ? (
+    <>
+      <p class="mx-eyebrow">I do this for a living now</p>
+      <p class="mx-lead">
+        At Mahal Systems, Jason Davis and I help teams measure and improve their agents. <strong>{MAHAL.mission}</strong>
+      </p>
+    </>
+  ) : (
+    <>
+      <h3 class="mx-h">{MAHAL.mission}</h3>
+      <p class="mx-lead">{MAHAL.pitch}</p>
+      <ul class="mx-list">
+        <li><strong>AOT Evals</strong>: an open-source (Apache 2.0) method and Claude Code plugin for building evals from real traces and telling real improvements from noise.</li>
+        <li><strong>AOT Library</strong>: dozens of vetted ways to make an agent better, cheaper, or faster, with the evidence for each.</li>
+        <li><strong>Hands-on help</strong>: custom testing environments, LLM-judge calibration, expert grader programs, and forward-deployed engineering.</li>
+      </ul>
+      <div class="mx-term" aria-label="Install AOT Evals"><span>$ </span>{MAHAL.install}</div>
+    </>
+  )}
+  <div class="mx-actions">
+    <a class="mx-btn" href={`mailto:${MAHAL.email}`}>Talk to us</a>
+    <a class="mx-btn mx-btn--outline" href={MAHAL.url} target="_blank" rel="noopener">mahalsystems.ai</a>
+    {!compact && <a class="mx-btn mx-btn--outline" href={MAHAL.research} target="_blank" rel="noopener">Research + newsletter</a>}
+  </div>
+</div>
