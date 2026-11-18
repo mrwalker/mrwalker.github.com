@@ -1,5 +1,5 @@
 // Cloudflare Workers static-assets deploy for mwalker.info.
-// Build: `pnpm build` -> ./dist ; Deploy: `pnpm wrangler deploy` (or Workers Builds on push).
+// Build: `pnpm build` -> ./dist ; Deploy: `pnpm run deploy`.
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "mwalker-info",
@@ -9,8 +9,9 @@
     "not_found_handling": "404-page",
     "html_handling": "auto-trailing-slash"
   },
+  // Zone route on the proxied apex: the Worker answers before the old GitHub Pages origin is ever reached.
+  // hub.mwalker.info and other subdomains are untouched.
   "routes": [
-    { "pattern": "mwalker.info", "custom_domain": true },
-    { "pattern": "www.mwalker.info", "custom_domain": true }
+    { "pattern": "mwalker.info/*", "zone_name": "mwalker.info" }
   ]
 }
