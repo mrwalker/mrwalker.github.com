@@ -4,6 +4,7 @@ date: "2025-09-05"
 description: "How Simon extended composability from applications, to data, to AI agents running natively inside the customer's Snowflake."
 tags: ["agents", "data", "snowflake"]
 cover: "/images/writing/cortex.jpg"
+coverFit: "contain"
 canonical: "https://medium.com/snowflake/why-simon-data-chose-snowflake-cortex-ai-to-deliver-1-1-personalization-b81785e8d2df"
 mirrorName: "Snowflake Builders Blog on Medium"
 mirrorUrl: "https://medium.com/snowflake/why-simon-data-chose-snowflake-cortex-ai-to-deliver-1-1-personalization-b81785e8d2df"

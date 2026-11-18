@@ -6,6 +6,7 @@ seriesOrder: 2
 description: "Skills are agents you can bolt on at runtime: prompt + context + tools, loaded on demand. Why they beat bigger agents."
 tags: ["agents"]
 cover: "/images/writing/clearly-a-skill-issue.jpg"
+coverFit: "contain"
 mirrorName: "Simon Systems on Medium"
 mirrorUrl: "https://medium.com/simon-systems/clearly-a-skill-issue-0780d3304067"
 ---
