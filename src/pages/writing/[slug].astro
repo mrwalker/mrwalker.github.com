@@ -35,7 +35,7 @@ const older = idx < all.length - 1 ? all[idx + 1] : undefined;
       </div>
     </header>
 
-    {d.cover && <img class={`article-cover fit-${d.coverFit}`} src={d.cover} alt="" />}
+    {d.cover && <img class={`article-cover fit-${d.coverFit}`} src={d.cover} alt="" style={d.coverPosition ? `object-position: ${d.coverPosition}` : undefined} />}
 
     {series.length > 1 && (
       <div class="series-box">

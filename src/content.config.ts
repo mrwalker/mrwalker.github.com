@@ -19,6 +19,8 @@ const writing = defineCollection({
     cover: z.string().optional(),
     /** 'contain' for diagrams: show the whole image on white instead of cropping to fill. */
     coverFit: z.enum(['cover', 'contain']).default('cover'),
+    /** CSS object-position for cropped covers, e.g. "50% 0%" to keep the top. Default "50% 30%". */
+    coverPosition: z.string().optional(),
     /** Set only when another venue should be the canonical URL (e.g. a partner's blog). */
     canonical: z.string().url().optional(),
     mirrorName: z.string().optional(),

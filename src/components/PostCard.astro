@@ -3,10 +3,10 @@ import type { Post } from '../lib/content';
 import { fmtDate, readingTime } from '../lib/content';
 interface Props { post: Post }
 const { post } = Astro.props;
-const { title, description, date, cover, coverFit, draft } = post.data;
+const { title, description, date, cover, coverFit, coverPosition, draft } = post.data;
 ---
 <a class="card" href={`/writing/${post.id}/`}>
-  {cover ? <img src={cover} alt="" loading="lazy" class={`fit-${coverFit}`} /> : <div class="noimg">{`/* ${post.data.tags[0] ?? 'writing'} */`}</div>}
+  {cover ? <img src={cover} alt="" loading="lazy" class={`fit-${coverFit}`} style={coverPosition ? `object-position: ${coverPosition}` : undefined} /> : <div class="noimg">{`/* ${post.data.tags[0] ?? 'writing'} */`}</div>}
   <div class="body">
     <h3>{title}</h3>
     <p>{description}</p>

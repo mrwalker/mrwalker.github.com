@@ -6,6 +6,7 @@ seriesOrder: 1
 description: "Cyborgs vs. Autobots turned out to be the wrong axis. What \"agent\" actually unlocked for us: tool use, chat, and state."
 tags: ["agents"]
 cover: "/images/writing/what-is-an-agent.jpg"
+coverPosition: "50% 0%"
 mirrorName: "Medium"
 mirrorUrl: "https://medium.com/@data_daddy/what-is-an-agent-9b64074b0946"
 ---
